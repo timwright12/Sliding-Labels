@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sliding Labels</title>
+
+<!--CSS-->
+<link rel="stylesheet" href="css/slidinglabels.css" media="all">
+
+</head>
+<body>
+
+<h1>Sliding Labels plugin demo</h1>
+
+<form id="contact-form">
+
+<ul>
+	<li class="slider">
+		<label for="name">name</label>
+		<input type="text" id="name" name="name">
+	</li>
+	<li class="slider">
+		<label for="url">url</label>
+		<input type="text" id="url" name="url">
+	</li>
+	<li class="slider">
+		<label for="email">email</label>
+		<input type="text" id="email" name="email">
+	</li>
+</ul>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<!--JavaScript-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://www.csskarma.com/lab/jquery.plugins/jquery.slidinglabels.min.js"></script>
+<script>
+$(function(){
+
+	$('#contact-form').slidinglabels({
+
+		/* these are all optional */
+        className    : 'slider', // the class you're wrapping the label & input with -> default = slider
+		topPosition  : '5px',  // how far down you want each label to start
+		leftPosition : '5px',  // how far left you want each label to start
+		axis         : 'x',    // can take 'x' or 'y' for slide direction
+		speed        : 'fast'  // can take 'fast', 'slow', or a numeric value
+
+	});
+
+});
+</script>
+
+</body>
+</html>
